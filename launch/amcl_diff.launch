@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="amcl" type="amcl" name="amcl" output="screen">
+    <remap from="scan" to="scan" />
+    <rosparam file="$(find raspicat_slam)/config/amcl/amcl_diff.yaml" command="load" />
+  </node>
+</launch>
